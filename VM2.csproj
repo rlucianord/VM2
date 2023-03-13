@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-VM2-9f7dfccc-cf08-446d-baea-05009af93396</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="VM2.AccesoDatos\**" />
+    <Compile Remove="VM2.Model\**" />
+    <Content Remove="VM2.AccesoDatos\**" />
+    <Content Remove="VM2.Model\**" />
+    <EmbeddedResource Remove="VM2.AccesoDatos\**" />
+    <EmbeddedResource Remove="VM2.Model\**" />
+    <None Remove="VM2.AccesoDatos\**" />
+    <None Remove="VM2.Model\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.13" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.16.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="VM2.AccesoDatos\VM2.AccesoDatos.csproj" />
+  </ItemGroup>
+
+</Project>
